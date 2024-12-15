@@ -4,29 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Top Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        ul {
-            list-style-type: none;
+            margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 200% 200%;
+            animation: background-animation 10s infinite alternate;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 50px;
         }
 
-        li {
-            margin: 10px 0;
+        @keyframes background-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            animation: text-glow 2s infinite alternate;
+        }
+
+        @keyframes text-glow {
+            0% {
+                text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 2px 2px 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         a {
             text-decoration: none;
-            color: #007BFF;
+            font-size: 1.5em;
+            color: #fff;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            border-radius: 30px;
+            animation: rainbow 5s infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
         }
 
         a:hover {
-            text-decoration: underline;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        a:active {
+            transform: scale(0.9);
         }
     </style>
 </head>
@@ -34,13 +90,12 @@
 <body>
     <h1>Content Links</h1>
     <p>Select a page to view:</p>
-    <ul>
-        <li><a href="content/test.html">test</a></li>
-        <li><a href="content/Mg-Def.html">Mg-Def</a></li>
-        <li><a href="content/N-Def.html">N-Def</a></li>
-        <li><a href="content/K-Def.html">K-Def</a></li>
+    <div class="link-container">
+        <a href="content/Mg-Def.html">Mg-Def</a>
+        <a href="content/N-Def.html">N-Def</a>
+        <a href="content/K-Def.html">K-Def</a>
         <!-- Add more links here if needed -->
-    </ul>
+    </div>
 </body>
 
 </html>
