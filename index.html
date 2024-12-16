@@ -6,23 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Page</title>
     <style>
+        /* Apply font and remove default margins/paddings */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            /* Create a dynamic and vibrant background animation */
             background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fce38a, #f38181);
             background-size: 400% 400%;
             animation: background-animation 8s infinite alternate ease-in-out;
             color: #fff;
+            /* Ensure text contrasts against the colorful background */
             text-align: center;
             height: 100vh;
+            /* Make body fill the viewport height */
             display: flex;
+            /* Use flexbox for layout */
             flex-direction: column;
             justify-content: flex-start;
+            /* Align items towards the top */
             align-items: center;
             padding-top: 20px;
+            /* Add padding to move content slightly down */
         }
 
+        /* Background animation for dynamic effect */
         @keyframes background-animation {
             0% {
                 background-position: 0% 50%;
@@ -33,20 +41,28 @@
             }
         }
 
+        /* Style for the main title */
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
+            /* Adjusted for smaller size */
             text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.7), 0 0 30px #fff;
+            /* Add glowing effect */
             margin-bottom: 10px;
             animation: text-glow 3s infinite alternate;
+            /* Animate the text shadow */
         }
 
+        /* Style for the section titles */
         h2 {
-            font-size: 1.8em;
+            font-size: 1.6em;
+            /* Adjust size to be smaller */
             margin-top: 30px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.7);
+            /* Subtle glow effect */
         }
 
+        /* Text glow animation for titles */
         @keyframes text-glow {
             0% {
                 text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5), 0 0 15px #ff9a9e;
@@ -57,27 +73,45 @@
             }
         }
 
+        /* Container for grouping links */
         .link-container {
             display: flex;
+            /* Arrange links horizontally */
             justify-content: center;
+            /* Center links within the container */
             gap: 20px;
+            /* Add space between links */
             flex-wrap: wrap;
+            /* Allow links to wrap to the next line */
         }
 
+        /* Style for individual links */
         a {
             text-decoration: none;
+            /* Remove underline */
             font-size: 1.2em;
+            /* Smaller font size for links */
             color: #fff;
+            /* White text for visibility */
             padding: 10px 20px;
+            /* Add padding around the link text */
             background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            /* Gradient background */
             border-radius: 50px;
+            /* Round the corners */
             border: 2px solid rgba(255, 255, 255, 0.8);
+            /* Add a subtle border */
             animation: rainbow 6s infinite linear;
+            /* Animate the gradient */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transitions for hover effects */
             display: inline-block;
+            /* Ensure links are treated as block-level elements */
             text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+            /* Add slight shadow to text */
         }
 
+        /* Gradient animation for links */
         @keyframes rainbow {
             0% {
                 background-position: 0%;
@@ -88,23 +122,32 @@
             }
         }
 
+        /* Hover effect for links */
         a:hover {
             transform: scale(1.1) rotate(5deg);
+            /* Enlarge and slightly rotate on hover */
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 30px #fff;
+            /* Add a glowing shadow */
             text-shadow: 2px 2px 20px rgba(255, 255, 255, 1), 0 0 40px #fad0c4;
+            /* Intensify text glow */
         }
 
+        /* Active effect for links */
         a:active {
             transform: scale(1);
+            /* Reset scale on click */
             box-shadow: none;
+            /* Remove shadow on click */
         }
     </style>
 </head>
 
 <body>
+    <!-- Main title -->
     <h1>Visualization by PaCMAP<br>Content Links</h1>
     <p><b>Select a page to view!</b></p>
 
+    <!-- Section for Inception V3 links -->
     <h2>Inception V3 (with FID)</h2>
     <div class="link-container">
         <a href="content/inception_v3/Mg-Def.html" target="_blank" rel="noopener noreferrer">Mg-Def</a>
@@ -113,6 +156,7 @@
         <!-- Add more links here if needed -->
     </div>
 
+    <!-- Section for ConvNeXt links -->
     <h2>ConvNeXt XXLarge</h2>
     <div class="link-container">
         <a href="content/convnext_xxlarge/Mg-Def.html" target="_blank" rel="noopener noreferrer">Mg-Def</a>
