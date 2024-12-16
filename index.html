@@ -10,9 +10,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
-            background-size: 200% 200%;
-            animation: background-animation 10s infinite alternate;
+            background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fce38a, #f38181);
+            background-size: 400% 400%;
+            animation: background-animation 8s infinite alternate ease-in-out;
             color: #fff;
             text-align: center;
             height: 100vh;
@@ -20,13 +20,14 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding-top: 50px;
+            padding-top: 20px;
         }
 
         @keyframes background-animation {
             0% {
                 background-position: 0% 50%;
             }
+
             100% {
                 background-position: 100% 50%;
             }
@@ -34,17 +35,25 @@
 
         h1 {
             font-size: 3em;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.7), 0 0 30px #fff;
+            margin-bottom: 10px;
+            animation: text-glow 3s infinite alternate;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
             margin-bottom: 20px;
-            animation: text-glow 2s infinite alternate;
+            text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.7);
         }
 
         @keyframes text-glow {
             0% {
-                text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+                text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5), 0 0 15px #ff9a9e;
             }
+
             100% {
-                text-shadow: 2px 2px 20px rgba(255, 255, 255, 1);
+                text-shadow: 4px 4px 30px rgba(255, 255, 255, 1), 0 0 50px #fad0c4;
             }
         }
 
@@ -57,45 +66,60 @@
 
         a {
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #fff;
             padding: 10px 20px;
             background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
-            border-radius: 30px;
-            animation: rainbow 5s infinite;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            animation: rainbow 6s infinite linear;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: inline-block;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
         }
 
         @keyframes rainbow {
             0% {
                 background-position: 0%;
             }
+
             100% {
                 background-position: 200%;
             }
         }
 
         a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 30px #fff;
+            text-shadow: 2px 2px 20px rgba(255, 255, 255, 1), 0 0 40px #fad0c4;
         }
 
         a:active {
-            transform: scale(0.9);
+            transform: scale(1);
+            box-shadow: none;
         }
     </style>
 </head>
 
 <body>
-    <h1>Content Links</h1>
-    <p>Select a page to view:</p>
+    <h1>Visualization by PaCMAP<br>Content Links</h1>
+    <p><b>Select a page to view!</b></p>
+
+    <h2>Inception V3 (with FID)</h2>
     <div class="link-container">
-        <a href="content/Mg-Def.html">Mg-Def</a>
-        <a href="content/N-Def.html">N-Def</a>
-        <a href="content/K-Def.html">K-Def</a>
+        <a href="content/inception_v3/Mg-Def.html" target="_blank" rel="noopener noreferrer">Mg-Def</a>
+        <a href="content/inception_v3/N-Def.html" target="_blank" rel="noopener noreferrer">N-Def</a>
+        <a href="content/inception_v3/K-Def.html" target="_blank" rel="noopener noreferrer">K-Def</a>
         <!-- Add more links here if needed -->
     </div>
-</body>
+
+    <h2>ConvNeXt XXLarge</h2>
+    <div class="link-container">
+        <a href="content/convnext_xxlarge/Mg-Def.html" target="_blank" rel="noopener noreferrer">Mg-Def</a>
+        <a href="content/convnext_xxlarge/N-Def.html" target="_blank" rel="noopener noreferrer">N-Def</a>
+        <a href="content/convnext_xxlarge/K-Def.html" target="_blank" rel="noopener noreferrer">K-Def</a>
+        <!-- Add more links here if needed -->
+    </div>
+</body>https://arxiv.org/abs/2012.04456
 
 </html>
